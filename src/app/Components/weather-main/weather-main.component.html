@@ -1,0 +1,15 @@
+<div class = "inputs">
+    <label for="city">Enter city: </label>
+    <input type = "text" class = "city" #city placeholder="chennai" id="city">
+    <button (click)="editURL(city.value)" id="btn" >OK</button>
+</div>
+
+<div id="divWeatherMain" > 
+    <div class="weatherWidgetRow" style="font-size: 32px;margin-top: 5px;">{{weatherReport.temp_celcius}}°</div>
+    <div class="weatherWidgetRow" style="font-size: 12px;">{{weatherReport.temp_min}}° / {{weatherReport.temp_max}}°</div>
+    <div class="weatherWidgetRow" style="font-size: 12px;">Feels Like: {{weatherReport.temp_feels_like}}°</div>
+    <div class="weatherWidgetRow" style="font-size: 25px;margin-top: 10px;">{{weatherReport.name}}</div>
+    <div class="weatherWidgetRow" style="font-size: 12px;">Humidity: {{weatherReport.humidity}}%</div>
+</div>
+
+<h2 class = "inputs" style="color: red;" >{{noti}}</h2>
